@@ -5,23 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.css';
-import {useEffect} from "react"
-import { useParams } from "react-router-dom"
 
 function MovieModal(props) {
-  const [currentMovieDetail, setMovie] = useState()
-    const { id } = useParams()
 
-    useEffect(() => {
-        getData()
-        window.scrollTo(0,0)
-    }, [])
-
-    const getData = () => {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=db95773a7fb212ba790d71f6adac0e7e&language=en-US`)
-        .then(res => res.json())
-        .then(data => setMovie(data))
-    }
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
       <Modal.Header closeButton>

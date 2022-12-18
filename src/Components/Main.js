@@ -18,7 +18,7 @@ const Main=()=>{
     },[url_set])
 
     const getData=(movieType)=>{
-        if(movieType=="Popular")
+        if(movieType==="Popular")
         {
             url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
         }
@@ -27,7 +27,7 @@ const Main=()=>{
 
     }
     const searchMovie=(evt)=>{
-        if(evt.key=="Enter")
+        if(evt.key==="Enter")
         {
             url=base_url+"/search/movie?api_key=db95773a7fb212ba790d71f6adac0e7e&query="+search;
             setUrl(url);
@@ -42,7 +42,7 @@ const Main=()=>{
                         {
                             arr.map((value,pos)=>{
                                 return(
-                                    <li><h2><a href="#" key={pos} name={value} onClick={(e)=>{getData(e.target.name)}}>{value}</a></h2></li>
+                                    <li><h2><a href="" key={pos} name={value} onClick={(e)=>{getData(e.target.name)}} alt="">{value}</a></h2></li>
                                 )
                             })
                         }
