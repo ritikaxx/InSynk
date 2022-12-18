@@ -42,7 +42,7 @@ const Main=()=>{
                         {
                             arr.map((value,pos)=>{
                                 return(
-                                    <li><h2><a href="" key={pos} name={value} onClick={(e)=>{getData(e.target.name)}} alt="">{value}</a></h2></li>
+                                    <li><h2><a href="/" key={pos} name={value} onClick={(e)=>{getData(e.target.name)}}>{value}</a></h2></li>
                                 )
                             })
                         }
@@ -61,7 +61,7 @@ const Main=()=>{
             </div>
             <div className="container" >
                 {
-                    (movieData.length==0)?<p className="notfound">Not Found</p>: movieData.map((res,pos)=>{
+                    (movieData.length===0)?<p className="notfound">Not Found</p>: movieData.map((res,pos)=>{
                         return(
                             //<div onClick={() => setModalShow(true)}>
                             <Card info={res} key={pos} />
